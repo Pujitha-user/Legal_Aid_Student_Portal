@@ -1,0 +1,144 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "The Anti-AI Designer",
+    "mission": "Create a 'Neo-Gov' aesthetic that bridges formal authority with modern digital fluidity. No boring government portals.",
+    "principles": [
+      "Fusion: Swiss Grid meets Indian Heritage",
+      "Emotion: Trust through Typography",
+      "Content: Every pixel serves the legal query",
+      "Contrast: Deep Navy vs. Vibrant Saffron"
+    ]
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Merriweather, serif",
+      "usage": "All H1-H3 headings. Use font-black for H1, font-bold for H2.",
+      "tailwind_class": "font-serif tracking-tight"
+    },
+    "body": {
+      "font_family": "Manrope, sans-serif",
+      "usage": "All paragraphs, inputs, and UI elements.",
+      "tailwind_class": "font-sans leading-relaxed"
+    },
+    "mono": {
+      "font_family": "JetBrains Mono, monospace",
+      "usage": "Case numbers, FIR IDs, Legal citations.",
+      "tailwind_class": "font-mono text-xs tracking-wider"
+    }
+  },
+  "colors": {
+    "palette_name": "Digital Ashoka",
+    "primary": {
+      "name": "Supreme Navy",
+      "hex": "#0f172a",
+      "tailwind": "bg-slate-900",
+      "usage": "Primary buttons, Footer, Header backgrounds, Text-High-Contrast"
+    },
+    "secondary": {
+      "name": "Digital Saffron",
+      "hex": "#f97316",
+      "tailwind": "bg-orange-500",
+      "usage": "Call to Actions (Submit), Highlights, Active States"
+    },
+    "accent": {
+      "name": "Verdict Green",
+      "hex": "#059669",
+      "tailwind": "bg-emerald-600",
+      "usage": "Success states, Verified badges, 'Safe' indicators"
+    },
+    "background": {
+      "name": "Legal Paper",
+      "hex": "#f8fafc",
+      "tailwind": "bg-slate-50",
+      "usage": "Main page background"
+    },
+    "surface": {
+      "name": "White Card",
+      "hex": "#ffffff",
+      "tailwind": "bg-white",
+      "usage": "Cards, Input fields, Modals"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "1px solid rgba(15, 23, 42, 0.1)",
+    "shadows": "0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06)",
+    "radius": "rounded-none md:rounded-lg",
+    "textures": "Use subtle noise overlay on the Navy backgrounds to avoid 'flatness'."
+  },
+  "component_rules": {
+    "buttons": {
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 rounded-md px-8 py-6 font-bold shadow-lg hover:shadow-xl transition-all",
+      "secondary": "bg-white text-slate-900 border-2 border-slate-200 hover:border-slate-900 rounded-md px-8 py-6 font-bold transition-all",
+      "accent": "bg-orange-500 text-white hover:bg-orange-600 rounded-md px-8 py-6 font-bold shadow-orange-500/20 shadow-lg"
+    },
+    "cards": {
+      "style": "bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all p-6 or p-8",
+      "header": "border-b border-slate-100 pb-4 mb-4"
+    },
+    "inputs": {
+      "style": "h-12 bg-slate-50 border-slate-200 focus:border-slate-900 focus:ring-1 focus:ring-slate-900 rounded-md transition-all"
+    }
+  },
+  "layout_strategies": {
+    "home_grid": "grid grid-cols-1 md:grid-cols-12 gap-8 p-4 md:p-12",
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-4 gap-6 p-6",
+    "form_wizard": "max-w-3xl mx-auto space-y-8 py-12"
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1716483081614-d9053f2f2801?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjBzdXByZW1lJTIwY291cnQlMjBidWlsZGluZyUyMGFyY2hpdGVjdHVyZXxlbnwwfHx8fDE3NjY1MDcwNjN8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Indian Supreme Court Building - Use with heavy dark overlay for Hero Section",
+      "category": "hero"
+    },
+    "legal_context": {
+      "url": "https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg",
+      "description": "Gavel and Books - Use for 'Legal Resources' or 'About' section",
+      "category": "context"
+    },
+    "professional": {
+      "url": "https://images.pexels.com/photos/7680338/pexels-photo-7680338.jpeg",
+      "description": "Professional Lawyer/Official - Use for 'Internship Portal' or 'Expert Advice'",
+      "category": "people"
+    },
+    "emblem_placeholder": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg",
+      "description": "National Emblem (Use SVG if possible, else this URL)",
+      "category": "logo"
+    }
+  },
+  "motion": {
+    "page_transition": "initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4, ease: 'easeOut' }}",
+    "hover_lift": "hover:-translate-y-1 transition-transform duration-200",
+    "button_tap": "active:scale-95 transition-transform duration-100"
+  },
+  "accessibility": {
+    "contrast": "Ensure all text on Navy backgrounds is Pure White (#FFFFFF). Text on Saffron must be Black or Dark Navy.",
+    "focus_states": "focus:ring-2 focus:ring-offset-2 focus:ring-slate-900",
+    "aria": "All icon-only buttons (like Mic) must have aria-label."
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'lucide-react' for icons. Use 'Merriweather' and 'Manrope' from Google Fonts.",
+    "2. THEME: Update tailwind.config.js to use the 'Digital Ashoka' palette. Override the default 'radius' to 0.5rem.",
+    "3. NAVBAR: Create a sticky navbar with 'Glassmorphism' (backdrop-blur-md bg-white/80). Include the Language Toggle prominently.",
+    "4. HOME: Implement the 'Tetris Grid'. Hero section must use the Supreme Court image with a gradient overlay (slate-900/90 to slate-900/40).",
+    "5. VOICE INPUT: Create a 'VoiceRecorder' component. Use a large, pulsing FAB (Floating Action Button) style for the microphone.",
+    "6. FORMS: Do not use long scrolling forms. Break the 'Submit Legal Query' into 3 steps: Personal Details -> Case Description -> Voice/Evidence Upload.",
+    "7. RESPONSE PAGE: Style this like a formal legal document. Use a 'Paper' texture background (subtle noise) and Serif fonts for the content.",
+    "8. INTERNSHIP PORTAL: Use a dense 'Control Room' grid. Data tables should be clean with zebra striping (odd: bg-slate-50).",
+    "9. FOOTER: Massive 'Saffron' top border (border-t-4 border-orange-500). Dark Navy background.",
+    "10. TESTING: Add data-testid to all inputs and buttons."
+  ],
+  "universal_guidelines": {
+    "do_not": [
+      "Do not use default Shadcn 'zinc' colors. Use Slate (Blue-Grey).",
+      "Do not use gradients for text.",
+      "Do not center text in the 'Response' page; keep it left-aligned for readability."
+    ],
+    "must_do": [
+      "Use 'sonner' for all toast notifications.",
+      "Use 'lucide-react' icons: Scale, Gavel, Mic, FileText, User, Globe.",
+      "Ensure the 'Ashoka Chakra' Blue (#0f172a) is the dominant brand color."
+    ]
+  }
+}

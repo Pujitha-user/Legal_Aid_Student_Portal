@@ -1,0 +1,136 @@
+/* App-specific styles */
+
+/* Hero section gradient overlay */
+.hero-gradient {
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.6));
+}
+
+/* Saffron accent border */
+.saffron-border {
+    border-top: 4px solid #f97316;
+}
+
+/* Status badges */
+.status-open {
+    @apply bg-amber-100 text-amber-800 border border-amber-200;
+}
+
+.status-assigned {
+    @apply bg-blue-100 text-blue-800 border border-blue-200;
+}
+
+.status-closed {
+    @apply bg-emerald-100 text-emerald-800 border border-emerald-200;
+}
+
+/* Voice recorder button states */
+.mic-idle {
+    @apply bg-slate-900 text-white hover:bg-slate-800;
+}
+
+.mic-recording {
+    @apply bg-red-500 text-white animate-pulse;
+}
+
+/* Feature cards */
+.feature-card {
+    @apply bg-white border border-slate-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-200;
+}
+
+.feature-card:hover {
+    @apply -translate-y-1;
+}
+
+/* Language selector */
+.lang-btn {
+    @apply px-3 py-1.5 rounded-md text-sm font-medium transition-all;
+}
+
+.lang-btn-active {
+    @apply bg-slate-900 text-white;
+}
+
+.lang-btn-inactive {
+    @apply bg-slate-100 text-slate-600 hover:bg-slate-200;
+}
+
+/* Form wizard steps */
+.step-indicator {
+    @apply flex items-center justify-center w-8 h-8 rounded-full text-sm font-semibold;
+}
+
+.step-active {
+    @apply bg-orange-500 text-white;
+}
+
+.step-completed {
+    @apply bg-emerald-600 text-white;
+}
+
+.step-pending {
+    @apply bg-slate-200 text-slate-500;
+}
+
+/* Response card styling */
+.response-card {
+    @apply bg-white border border-slate-200 rounded-lg overflow-hidden;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06);
+}
+
+/* Document preview */
+.document-preview {
+    @apply bg-slate-50 border border-slate-200 rounded-lg p-6 font-mono text-sm whitespace-pre-wrap;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+/* Navigation active state */
+.nav-link {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-all;
+}
+
+.nav-link-active {
+    @apply bg-slate-900 text-white;
+}
+
+.nav-link-inactive {
+    @apply text-slate-600 hover:bg-slate-100 hover:text-slate-900;
+}
+
+/* Loading spinner */
+.spinner {
+    @apply animate-spin h-5 w-5 border-2 border-slate-200 border-t-slate-900 rounded-full;
+}
+
+/* Category tags */
+.category-tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.category-fir {
+    @apply bg-red-100 text-red-800;
+}
+
+.category-rti {
+    @apply bg-purple-100 text-purple-800;
+}
+
+.category-consumer {
+    @apply bg-blue-100 text-blue-800;
+}
+
+.category-labour {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.category-family {
+    @apply bg-pink-100 text-pink-800;
+}
+
+.category-property {
+    @apply bg-green-100 text-green-800;
+}
+
+.category-general {
+    @apply bg-slate-100 text-slate-800;
+}
