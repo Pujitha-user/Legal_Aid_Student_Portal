@@ -28,9 +28,16 @@ app = Flask(__name__)
 CORS(app)
 
 # MongoDB setup
-mongo_url = os.environ.get('MONGO_URL', 'mongodb://localhost:27017')
+mongo_url = os.environ.get('MONGO_URL')
+if not mongo_url:
+    raise ValueError("MONGO_URL environment variable is required but not set")
+
+db_name = os.environ.get('DB_NAME')
+if not db_name:
+    raise ValueError("DB_NAME environment variable is required but not set")
+
 mongo_client = MongoClient(mongo_url)
-db = mongo_client[os.environ.get('DB_NAME', 'test_database')]
+db = mongo_client[db_name]
 
 # Audio directory
 AUDIO_DIR = ROOT_DIR / "audio_files"
