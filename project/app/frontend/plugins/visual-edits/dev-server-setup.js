@@ -6,8 +6,16 @@ const express = require("express");
 const { execSync } = require("child_process");
 
 // 🔍 Read Supervisor code-server password from conf.d
+// SECURITY NOTE: This password should be stored securely and not committed to the repository.
+// In production, consider using environment variables or a secure secrets management system.
 function getCodeServerPassword() {
   try {
+    // Attempt to read from environment variable first
+    if (process.env.SUPERVISOR_PASSWORD) {
+      return process.env.SUPERVISOR_PASSWORD;
+    }
+    
+    // Fallback to reading from config file
     const conf = fs.readFileSync(
       "/etc/supervisor/conf.d/supervisord_code_server.conf",
       "utf8",
@@ -16,7 +24,11 @@ function getCodeServerPassword() {
     // Match environment=PASSWORD="value"
     const match = conf.match(/PASSWORD="([^"]+)"/);
     return match ? match[1] : null;
-  } catch {
+  } catch (error) {
+    // Log helpful error message if config file is missing
+    if (error.code === 'ENOENT') {
+      console.warn('⚠️  Supervisor config file not found. Set SUPERVISOR_PASSWORD environment variable for authentication.');
+    }
     return null;
   }
 }

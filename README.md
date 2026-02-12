@@ -52,6 +52,52 @@ User → Frontend (React.js) → Backend API (FastAPI) → AI Processing Engine 
 
 ---
 
+## 🔐 Security & Environment Variables
+
+This application uses environment variables to manage sensitive configuration. **Never commit your `.env` file to version control.**
+
+### Setup Environment Variables
+
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` and add your actual credentials:
+   ```bash
+   # MongoDB Configuration
+   MONGO_URL=mongodb://localhost:27017
+   DB_NAME=your_database_name
+
+   # AI API Keys (Optional)
+   OPENAI_API_KEY=sk-your-actual-openai-key
+   GEMINI_API_KEY=your-actual-gemini-key
+   AI_API_URL=https://your-ai-api-url.com
+
+   # CORS Configuration
+   CORS_ORIGINS=http://localhost:3000,http://localhost:8000
+   ```
+
+3. **Important Security Notes:**
+   - ✅ The `.env` file is already in `.gitignore` and will not be committed
+   - ✅ Use strong, unique API keys for production environments
+   - ✅ Rotate API keys regularly
+   - ✅ Never share your `.env` file or commit it to the repository
+   - ✅ Use different credentials for development and production
+
+### Required Environment Variables
+
+| Variable | Required | Description | Example |
+|----------|----------|-------------|---------|
+| `MONGO_URL` | Yes | MongoDB connection string | `mongodb://localhost:27017` |
+| `DB_NAME` | Yes | Database name | `legal_aid_db` |
+| `OPENAI_API_KEY` | No | OpenAI API key for AI features | `your-openai-key-here` |
+| `GEMINI_API_KEY` | No | Google Gemini API key | `your-gemini-key-here` |
+| `AI_API_URL` | No | Custom AI API endpoint | `https://api.example.com` |
+| `CORS_ORIGINS` | No | Allowed CORS origins (comma-separated) | `http://localhost:3000` |
+
+---
+
 ##  Project Structure
 legal-aid-system/
 

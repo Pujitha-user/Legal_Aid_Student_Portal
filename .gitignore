@@ -7,3 +7,7 @@ data/
 TESTING_GUIDE.md
 TEST_REPORT_FIXES.md
 project.zip
+
+# Environment variables
+.env.*
+!.env.example
