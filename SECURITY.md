@@ -29,6 +29,11 @@ If you discover a security vulnerability in this project, please report it by em
 - Run `npm audit` or `pip check` to identify known vulnerabilities
 - Review dependency licenses and sources
 
+### System Configuration
+- If using supervisor or similar process managers, ensure configuration files containing passwords are not committed to the repository
+- Store supervisor passwords and other system credentials in environment variables or secure secrets management systems
+- The file `/etc/supervisor/conf.d/supervisord_code_server.conf` should be kept secure and not be committed to version control
+
 ## Supported Versions
 
 Currently supporting the latest version with security updates.

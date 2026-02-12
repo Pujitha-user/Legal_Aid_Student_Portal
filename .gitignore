@@ -9,11 +9,9 @@ TEST_REPORT_FIXES.md
 project.zip
 
 # Environment variables
+!.env.example
 .env.local
 .env.*.local
-*.env
+.env.*
 .env.production
 .env.development
-
-# Supervisor configuration with sensitive data
-/etc/supervisor/conf.d/supervisord_code_server.conf
