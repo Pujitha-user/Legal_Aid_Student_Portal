@@ -69,6 +69,45 @@ legal-aid-system/
 
 ---
 
+## Setup Instructions
+
+### Environment Configuration
+
+The application requires environment variables to be configured before running. Follow these steps:
+
+1. Navigate to the backend directory:
+   ```bash
+   cd project/app/backend
+   ```
+
+2. Create a `.env` file based on the `.env.example` template:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Edit the `.env` file and configure the required variables:
+   - **MONGO_URL**: MongoDB connection string (Required)
+   - **DB_NAME**: Database name for the application (Required)
+
+   Example:
+   ```
+   MONGO_URL=mongodb://localhost:27017
+   DB_NAME=legal_aid_db
+   ```
+
+4. **Important**: Never commit the `.env` file to version control as it may contain sensitive credentials. The `.env` file is already included in `.gitignore`.
+
+### Running the Application
+
+After configuring the environment variables, you can start the backend server:
+
+```bash
+cd project/app/backend
+python app.py
+```
+
+---
+
 ##  Sample Use Case – FIR/RTA Generation
 
 1. User selects "Generate FIR/RTA"
